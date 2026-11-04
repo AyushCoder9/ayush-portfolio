@@ -37,8 +37,8 @@ export function createAudio({ button } = {}) {
   let shatterArmed = true;
   const armed = { seam: true, lift: true, eyes: true, door: true };
   const lastPlayed = {};
-  // a local-only soundtrack: if public/media/local/music.mp3 exists it replaces the generative
-  // score (that folder is git- and vercel-ignored, so deployed builds fall back to the score)
+  // If /media/local/music.mp3 is present and served as audio, it replaces the generated score.
+  // Without that file, the browser-generated score is used instead.
   const TRACK_URL = '/media/local/music.mp3';
   let hasTrack = false;
   let trackEl = null;

@@ -611,3 +611,8 @@ body.frame-tags-on .chapter { transition: opacity 0.4s var(--ease); opacity: 0 !
   .wm-foot { flex-wrap: wrap; row-gap: 12px; }
   .wm-links { order: 3; width: 100%; margin-left: 0; }
 }
+
+/* Direct access to the complete, low-bandwidth portfolio archive. */
+.archive-link { color: inherit; text-decoration: none; font-size: 11px; letter-spacing: .08em; white-space: nowrap; }
+.archive-link:hover { color: #f4a7b7; }
+.archive-link:focus-visible { outline: 2px solid #f4a7b7; outline-offset: 4px; }

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content=
+  "Explore Ayush Kumar Singh's projects, experience and achievements.">
+  <title>Work & profile — Ayush Kumar Singh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;display=swap"
+  rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b0b10;
+      --muted: #aaaebc;
+      --line: #ffffff21;
+      --accent: #de7c92;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: #f5f2ee;
+      font-family: Geist,system-ui,sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    a:focus-visible {
+      outline: 2px solid #f4a7b7;
+      outline-offset: 4px;
+    }
+    a:hover {
+      color: #f2a0b0;
+    }
+    .shell {
+      width: min(1180px,calc(100% - 48px));
+      margin: auto;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 25px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    header a {
+      font-size: 13px;
+      letter-spacing: .08em;
+    }
+    .hero {
+      padding: 100px 0 72px;
+      max-width: 850px;
+    }
+    .eyebrow,.num,.tag,.stack,.label {
+      font-size: 11px;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .eyebrow {
+      color: var(--accent);
+    }
+    h1 {
+      font-size: clamp(48px,8vw,96px);
+      line-height: 1;
+      letter-spacing: -.06em;
+      font-weight: 500;
+      margin: 18px 0 24px;
+    }
+    .hero p {
+      font-size: clamp(17px,2vw,21px);
+      color: var(--muted);
+      max-width: 680px;
+    }
+    .hero-links,.links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      font-size: 13px;
+    }
+    .hero-links {
+      margin-top: 30px;
+    }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+      margin-bottom: 25px;
+    }
+    .section-head h2 {
+      font-size: 30px;
+      font-weight: 500;
+      letter-spacing: -.04em;
+      margin: 0;
+    }
+    .section-head span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      gap: 12px;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      padding: 25px;
+      border: 1px solid var(--line);
+      background: #ffffff06;
+      border-radius: 14px;
+      transition: transform .25s,border-color .25s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: #ffffff55;
+    }
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .tag {
+      text-align: right;
+      letter-spacing: .07em;
+    }
+    .card h3 {
+      font-size: 22px;
+      letter-spacing: -.035em;
+      line-height: 1.15;
+      font-weight: 500;
+      margin: 32px 0 14px;
+    }
+    .card p {
+      color: #c4c6cf;
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0 0 22px;
+    }
+    .card .stack {
+      font-size: 10px;
+      letter-spacing: .06em;
+      color: #9d9faa;
+      margin-top: auto;
+    }
+    .links {
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+    }
+    .links span {
+      color: #777b88;
+    }
+    .profile {
+      padding: 100px 0;
+    }
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .profile-box {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 28px;
+    }
+    .profile-box h3 {
+      font-size: 20px;
+      font-weight: 500;
+      margin: 5px 0 12px;
+    }
+    .profile-box p,.profile-box li {
+      color: #c4c6cf;
+      font-size: 14px;
+    }
+    .profile-box ul {
+      padding-left: 18px;
+    }
+    .profile-box a {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 30px 0 50px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    @media(max-width:850px) {
+      .grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+      }
+    }
+    @media(max-width:560px) {
+      .shell {
+        width: calc(100% - 32px);
+      }
+      .hero {
+        padding: 70px 0 50px;
+      }
+      .grid,.profile-grid {
+        grid-template-columns: 1fr;
+      }
+      .card {
+        padding: 22px;
+      }
+      .profile {
+        padding: 70px 0;
+      }
+      header a {
+        font-size: 11px;
+      }
+    }
+    @media(prefers-reduced-motion:reduce) {
+      * {
+        scroll-behavior: auto!important;
+        transition: none!important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <a href="/">← BACK TO THE EXPERIENCE</a><a href="mailto:ayushkumar1699@gmail.com">GET IN
+      TOUCH ↗</a>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="eyebrow">
+          Ayush Kumar Singh · Pune, India
+        </div>
+        <h1>Ideas, made<br>
+        tangible.</h1>
+        <p>From AI agents and industrial intelligence to developer tools and mobile experiences: a
+        closer look at the problems I explore and the systems I build.</p>
+        <div class="hero-links">
+          <a href="#projects">Explore all 15 projects ↓</a><a href="#about">Experience &
+          credentials ↓</a><a href="https://github.com/AyushCoder9" target="_blank" rel=
+          "noopener noreferrer">GitHub ↗</a>
+        </div>
+      </section>
+      <section id="projects">
+        <div class="section-head">
+          <h2>Selected & collected work</h2><span>15 projects · explore the code</span>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="card-top">
+              <span class="num">01</span><span class="tag">AI agents · Developer tools</span>
+            </div>
+            <h3>RepoPilot</h3>
+            <p>An issue-triage assistant that retrieves repository context, classifies issues and
+            proposes actions for human review. Its eight-stage LangGraph workflow combines hybrid
+            search, model failover, guardrails and observability.</p>
+            <p class="stack">Next.js · FastAPI · LangGraph · Redis · pgvector</p>
+            <div class="links">
+              <a href="https://github.com/AyushCoder9/RepoPilot" target="_blank" rel=
+              "noopener noreferrer">GitHub ↗</a><a href="https://repopilot-steel.vercel.app/"
+              target="_blank" rel="noopener noreferrer">Live demo ↗</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-top">
+              <span class="num">02</span><span class="tag">Payments · Distributed systems</span>
+            </div>
+            <h3>ParityLab</h3>
+            <p>A verification platform for Stripe integrations that exercises duplicate and
+            out-of-order webhooks, idempotency and state convergence. Includes sandbox adapters, an
+            outbox worker and restart tests.</p>
+            <p class="stack">Go · PostgreSQL · Next.js · Stripe sandbox · Playwright</p>
+            <div class="links">
+              <a href="https://github.com/AyushCoder9/ParityLab" target="_blank" rel=
+              "noopener noreferrer">GitHub ↗</a><a href="https://parity-lab-black.vercel.app/"
+              target="_blank" rel="noopener noreferrer">Live demo ↗</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-top">
+              <span class="num">03</span><span class="tag">AI · Productivity</span>
+            </div>
+            <h3>Meeting Intelligence</h3>
+            <p>Turns uploaded meeting transcripts into summaries, decisions and trackable action
+            items, with citation checks, overdue tracking and Discord reminders. The public demo
+            uses scripted examples.</p>
+            <p class="stack">React · TypeScript · Express · PostgreSQL · Groq · Gemini</p>
+            <div class="links">
+              <a href="https://github.com/AyushCoder9/meeting-intelligence-service" target="_blank"
+              rel="noopener noreferrer">GitHub ↗</a><a href=
+              "https://meeting-intelligence-service-client.vercel.app/" target="_blank" rel=
+              "noopener noreferrer">Live demo ↗</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-top">
+              <span class="num">04</span><span class="tag">iOS · Swift</span>
+            </div>
+            <h3>ClearSwap</h3>
+            <p>A SwiftUI peer-to-peer escrow and wallet concept exploring actor isolation,
+            location-aware interfaces, authentication and PassKit. Wallet preview and release
+            validation have prototype limitations.</p>
+            <p class="stack">Swift 6 · SwiftUI · SwiftData · PassKit · MapKit</p>
+            <div class="links">
+              <a href="https://github.com/AyushCoder9/ClearSwap" target="_blank" rel=
+              "noopener noreferrer">GitHub ↗</a><a href="https://clear-swap.vercel.app/" target=
+              "_blank" rel="noopener noreferrer">Live demo ↗</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-top">
+              <span class="num">05</span><span class="tag">Full-stack · SaaS</span>
+            </div>
+            <h3>StudioFlow</h3>
+            <p>An agency operations platform connecting a client portal and admin Kanban with
+            project workflows, messaging, invoices, real-time events and health scoring.</p>
+            <p class="stack">React · AngularJS · Node.js · PHP · Python · MySQL · MongoDB</p>
+            <div class="links">
+              <a href="https://github.com/AyushCoder9/StudioFlow" target="_blank" rel=
+              "noopener noreferrer">GitHub ↗</a><a href="https://studio-flow-portal.vercel.app/"
+              target="_blank" rel="noopener noreferrer">Live demo ↗</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-top">
+              <span class="num">06</span><span class="tag">Full-stack · Operations</span>
+            </div>
+            <h3>FleetPulse</h3>
+            <p>A fleet-spend dashboard that imports invoices, reconciles line items against
+            contracted rates and flags billing anomalies for review.</p>
+            <p class="stack">Django REST · PostgreSQL · Celery · Redis · React · TypeScript</p>
+            <div class="links">
+              <a href="https://github.com/AyushCoder9/FleetPulse" target="_blank" rel=
+              "noopener noreferrer">GitHub ↗</a><a href="https://fleet-pulse-fawn.vercel.app/"
+              target="_blank" rel="noopener noreferrer">Live demo ↗</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-top">
+              <span class="num">07</span><span class="tag">Machine learning · Industry</span>
+            </div>
+            <h3>YieldGuard</h3>
+            <p>An industrial predictive-maintenance project exploring sensor feature engineering,
+            XGBoost models, drift monitoring and explainable failure predictions.</p>
+            <p class="stack">Python · XGBoost · Optuna · FastAPI · SHAP · Docker</p>
+            <div class="links">
+              <a href="https://github.com/AyushCoder9/YieldGuard" target="_blank" rel=
+              "noopener noreferrer">GitHub ↗</a><a href="https://yield-guard-nine.vercel.app/"
+              target="_blank" rel="noopener noreferrer">Live demo ↗</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-top">
+              <span class="num">08</span><span class="tag">Mobile · AI</span>
+            </div>
+            <h3>Autonomous Field Intelligence Platform</h3>
+            <p>An offline-first field-work concept combining a React Native interface, local
+            storage and synchronization with a FastAPI backend and an AI analysis workflow.
+            Implementation and sync coverage have prototype limitations.</p>
+            <p class="stack">Expo · React Native · SQLite · PowerSync · FastAPI · LangGraph</p>
+            <div class="links">
+              <a href="https://github.com/AyushCoder9/Autonomous-Field-Intelligence-Platform"
+              target="_blank" rel="noopener noreferrer">GitHub ↗</a><span>Demo not listed</span>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-top">
+              <span class="num">09</span><span class="tag">Voice AI · Education</span>
+            </div>
+            <h3>VoiceTutor</h3>
+            <p>A voice-first Spanish tutor exploring low-latency conversational audio, lesson state
+            and spaced vocabulary review.</p>
+            <p class="stack">FastAPI · Next.js · WebSockets · Pipecat · Groq</p>
+            <div class="links">
+              <a href="https://github.com/AyushCoder9/VoiceTutor" target="_blank" rel=
+              "noopener noreferrer">GitHub ↗</a><a href="https://voicetutor-six.vercel.app/"
+              target="_blank" rel="noopener noreferrer">Live demo ↗</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-top">
+              <span class="num">10</span><span class="tag">AI agents · Evaluation</span>
+            </div>
+            <h3>TribalForge</h3>
+            <p>An auditable retrieval-augmented agent for industrial equipment diagnosis, with
+            workflow evaluation, containerized services and CI checks.</p>
+            <p class="stack">TypeScript · Python · Docker · GitHub Actions</p>
+            <div class="links">
+              <a href="https://github.com/AyushCoder9/TribalForge" target="_blank" rel=
+              "noopener noreferrer">GitHub ↗</a><span>Demo not listed</span>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-top">
+              <span class="num">11</span><span class="tag">Search · RAG</span>
+            </div>
+            <h3>Multi-Document Enterprise Search Assistant</h3>
+            <p>An assistant for searching and asking questions across documents, combining
+            ingestion, keyword and vector retrieval, a knowledge graph and model-provider
+            fallback.</p>
+            <p class="stack">React · Node.js · Express · SQLite · BM25 · Gemini</p>
+            <div class="links">
+              <a href="https://github.com/AyushCoder9/Multi-Document-Enterprise-Search-Assistant"
+              target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href=
+              "https://multi-document-enterprise-search-as.vercel.app/" target="_blank" rel=
+              "noopener noreferrer">Live demo ↗</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-top">
+              <span class="num">12</span><span class="tag">AI · Education</span>
+            </div>
+            <h3>PromptPrep</h3>
+            <p>Converts uploaded documents into study materials such as quizzes and flashcards
+            using a retrieval-assisted pipeline.</p>
+            <p class="stack">React · TypeScript · Node.js · Prisma · Supabase</p>
+            <div class="links">
+              <a href="https://github.com/AyushCoder9/PromptPrep" target="_blank" rel=
+              "noopener noreferrer">GitHub ↗</a><a href="https://prompt-prep.vercel.app/" target=
+              "_blank" rel="noopener noreferrer">Live demo ↗</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-top">
+              <span class="num">13</span><span class="tag">NLP · Legal technology</span>
+            </div>
+            <h3>ContraLegal AI</h3>
+            <p>A contract-analysis workflow for PDF extraction, clause risk scoring, PII masking,
+            clustering and AI-assisted explanations. The reviewed checkout falls back to a Random
+            Forest model.</p>
+            <p class="stack">Python · Streamlit · spaCy · scikit-learn · FAISS</p>
+            <div class="links">
+              <a href="https://github.com/AyushCoder9/ContraLegal-AI" target="_blank" rel=
+              "noopener noreferrer">GitHub ↗</a><a href="https://contralegal-ai.streamlit.app/"
+              target="_blank" rel="noopener noreferrer">Live demo ↗</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-top">
+              <span class="num">14</span><span class="tag">Full-stack · Recruiting</span>
+            </div>
+            <h3>Candidate Referral Management System</h3>
+            <p>A referral management application for candidate and resume workflows, built with a
+            React interface, Node.js API and object storage.</p>
+            <p class="stack">MongoDB · Express · React · Node.js · JWT · AWS S3</p>
+            <div class="links">
+              <a href="https://github.com/AyushCoder9/Candidate-Referral-Management" target=
+              "_blank" rel="noopener noreferrer">GitHub ↗</a><a href=
+              "https://candidate-referral-management-omega.vercel.app/" target="_blank" rel=
+              "noopener noreferrer">Live demo ↗</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-top">
+              <span class="num">15</span><span class="tag">AI · Analytics</span>
+            </div>
+            <h3>Impactify</h3>
+            <p>A collaborative text-to-insight project that uses language models to assist with
+            SQL-based analysis and present data through interactive dashboards.</p>
+            <p class="stack">React · Node.js · Gemini · Prisma · Recharts</p>
+            <div class="links">
+              <a href="https://github.com/angelonels/Impactify" target="_blank" rel=
+              "noopener noreferrer">GitHub ↗</a><a href="https://impactify-alpha.vercel.app/"
+              target="_blank" rel="noopener noreferrer">Live demo ↗</a>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="profile" id="about">
+        <div class="section-head">
+          <h2>The person behind the work</h2><span>Experience · education · achievements</span>
+        </div>
+        <div class="profile-grid">
+          <article class="profile-box">
+            <div class="label">
+              Now · July 2026 – present
+            </div>
+            <h3>Software Engineer Intern<br>
+            Lemon Tea Generative Technologies</h3>
+            <p>Building industrial line-intelligence interfaces and backend workflows with React,
+            TypeScript, NestJS and PostgreSQL/TimescaleDB. Work spans an operations copilot,
+            data-integrity debugging, fault-injection checks and stakeholder-led product
+            improvements.</p>
+          </article>
+          <article class="profile-box">
+            <div class="label">
+              Previously · June – July 2025
+            </div>
+            <h3>Team Lead & Front-End Web Developer<br>
+            CollegePur</h3>
+            <p>Led a four-person team building React admin dashboards, CRUD workflows, content
+            editing and exports.</p><a href=
+            "https://drive.google.com/drive/folders/1ZujMBrmjfByBNABB3FdLX2i-W2ANNlpC" target=
+            "_blank" rel="noopener noreferrer">Internship certificate ↗</a>
+          </article>
+          <article class="profile-box">
+            <div class="label">
+              Education & achievements
+            </div>
+            <h3>Learning by building</h3>
+            <ul>
+              <li>B.Tech, Computer Science (AI & ML), Newton School of Technology / Ajeenkya DY
+              Patil University, 2024–2028 · CGPA 9.26/10.</li>
+              <li>Class XII, Disha Delphi Public School, Kota: 82.8%; Class X, Tarapore School,
+              Jamshedpur: 96.0%.</li>
+              <li>Amazon ML Summer School 2026: selected in the top 2% of 134,421 applicants;
+              completed all modules.</li>
+              <li>2nd place, IIT Kanpur Techkriti Code & Compete and Hyperlume National GameDev
+              Hackathon.</li>
+              <li>Coordinator, Algonauts Competitive Programming Club, 2024–2025.</li>
+            </ul>
+          </article>
+          <article class="profile-box">
+            <div class="label">
+              Verified learning
+            </div>
+            <h3>Certificates & profiles</h3>
+            <ul>
+              <li>
+                <a href=
+                "https://drive.google.com/file/d/12wFclPtmT8ZBGafG5QxtaScpwvdbB7kH/view?usp=sharing"
+                target="_blank" rel="noopener noreferrer">Amazon ML Summer School 2026 ↗</a>
+              </li>
+              <li>
+                <a href="https://coursera.org/share/fe5ed751bfd37f202331300516c3756d" target=
+                "_blank" rel="noopener noreferrer">Generative AI for Everyone ↗</a>
+              </li>
+              <li>
+                <a href="https://coursera.org/share/caccc6ecb92d2d9850553017a96e0a8b" target=
+                "_blank" rel="noopener noreferrer">AI for Everyone ↗</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/ayush-kumar-singh-910379320/" target="_blank"
+                rel="noopener noreferrer">LinkedIn ↗</a> · <a href=
+                "https://leetcode.com/u/ayushsingh9/" target="_blank" rel=
+                "noopener noreferrer">LeetCode ↗</a> · <a href=
+                "https://codeforces.com/profile/AyushSinghCF" target="_blank" rel=
+                "noopener noreferrer">Codeforces ↗</a> · <a href=
+                "https://www.codechef.com/users/ayushsinghcf" target="_blank" rel=
+                "noopener noreferrer">CodeChef ↗</a> · <a href="https://www.kaggle.com/ayuxxx999"
+                target="_blank" rel="noopener noreferrer">Kaggle ↗</a>
+              </li>
+            </ul>
+          </article>
+          <article class="profile-box">
+            <div class="label">
+              Technology toolkit
+            </div>
+            <h3>Across the stack</h3>
+            <p><b>Languages:</b> Python, TypeScript, JavaScript, Go, C++, Swift, PHP, HTML and
+            CSS.</p>
+            <p><b>Products & infrastructure:</b> React, Next.js, Node.js, NestJS, Express, FastAPI,
+            Django REST, PostgreSQL, TimescaleDB, MySQL, MongoDB, Redis, Supabase, Docker, GitHub
+            Actions and Playwright.</p>
+            <p><b>AI & data:</b> LangChain, LangGraph, RAG, MCP, Gemini, Groq, PyTorch,
+            scikit-learn, XGBoost, Optuna, SHAP, FAISS, pgvector, Pandas and NumPy.</p>
+          </article>
+          <article class="profile-box">
+            <div class="label">
+              Contact
+            </div>
+            <h3>Start a conversation</h3>
+            <p>Pune, Maharashtra, India<br>
+            <a href="mailto:ayushkumar1699@gmail.com">ayushkumar1699@gmail.com</a><br>
+            <a href="tel:+919507201234">+91 9507201234</a></p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      © 2026 Ayush Kumar Singh · <a href=
+      "mailto:ayushkumar1699@gmail.com">ayushkumar1699@gmail.com</a> · <a href="/">Return to the
+      interactive portfolio ↑</a>
+    </footer>
+  </div>
+</body>
+</html>

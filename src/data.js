@@ -24,7 +24,7 @@ export const CHAPTERS = [
   {
     id: 'work',
     title: 'The work',
-    line: 'Agents, ML systems, payments infra, iOS. Fourteen projects shipped — six of them here.',
+    line: 'Agents, ML systems, payments infra, iOS. Explore six featured projects, or visit the complete work archive.',
   },
   {
     id: 'threshold',
@@ -41,7 +41,7 @@ export const CHAPTERS = [
     line: 'Bring the idea. I’ll take it from model to launch.',
     stats: [
       ['9.26', 'CGPA · B.Tech CS (AI & ML)'],
-      ['14', 'projects shipped end to end'],
+      ['15', 'projects in the work archive'],
     ],
   },
 ];
@@ -80,7 +80,7 @@ export const PROJECTS = [
     name: 'ClearSwap',
     tag: 'iOS · Swift 6 · Apple Wallet',
     color: '#ff3a5c',
-    desc: 'A secure peer-to-peer escrow and Apple Wallet terminal. Strict Swift 6 actor isolation keeps concurrent releases race-free; live proximity tracking runs on the Lock Screen and Dynamic Island; Face ID gates every payment and PassKit drops verifiable receipts into Wallet.',
+    desc: 'A SwiftUI peer-to-peer escrow and wallet prototype exploring actor isolation, proximity interfaces, Face ID and PassKit. Wallet preview and release validation remain prototype features.',
     stack: ['Swift 6', 'SwiftUI', 'SwiftData', 'PassKit', 'ActivityKit', 'MapKit'],
     code: `${GH}/ClearSwap`,
     live: 'https://clear-swap.vercel.app/',
@@ -91,7 +91,7 @@ export const PROJECTS = [
     name: 'YieldGuard',
     tag: 'ML · Predictive maintenance',
     color: '#ffb020',
-    desc: 'Industrial predictive maintenance. 504k+ noisy sensor records cleaned into 256 temporal features; XGBoost tuned with Optuna and expanding-window CV hits 0.851 PR-AUC on imbalanced time series — served from FastAPI in Docker with live PSI/KS drift monitoring and SHAP explanations.',
+    desc: 'An industrial predictive-maintenance project exploring sensor feature engineering, XGBoost, drift monitoring and SHAP explanations. Reported training metrics should be interpreted with the project’s data and evaluation boundaries.',
     stack: ['Python', 'XGBoost', 'Optuna', 'SHAP', 'FastAPI', 'Docker'],
     code: `${GH}/YieldGuard`,
     live: 'https://yield-guard-nine.vercel.app/',
@@ -102,7 +102,7 @@ export const PROJECTS = [
     name: 'ContraLegal AI',
     tag: 'NLP · Legal-BERT · Explainable AI',
     color: '#3b7bff',
-    desc: 'A contract analyser that removes the manual review bottleneck. Legal-BERT fine-tuned on 21k+ clauses reaches 0.93 macro F1 and 85.9% high-risk recall; spaCy NER redacts PII on-device, K-Means clusters clauses, and a LangChain + FAISS engine explains every flag on the PDF itself.',
+    desc: 'A contract-analysis workflow combining PDF extraction, spaCy PII masking, hybrid ML and rule-based risk scoring, clause clustering, retrieval and LLM-assisted explanations. The reviewed checkout falls back to a Random Forest model.',
     stack: ['Legal-BERT', 'spaCy', 'scikit-learn', 'LangChain', 'FAISS', 'Streamlit'],
     code: `${GH}/ContraLegal-AI`,
     live: 'https://contralegal-ai.streamlit.app/',
@@ -113,8 +113,8 @@ export const PROJECTS = [
     name: 'VoiceTutor',
     tag: 'Voice AI · Real-time audio',
     color: '#c45cff',
-    desc: 'A voice-first Spanish tutor you can interrupt mid-sentence. A low-latency Pipecat pipeline with Groq Llama 3.3, ElevenLabs and Silero VAD over WebSockets, an FSM lesson manager and an FSRS spaced-repetition engine that personalises every review.',
-    stack: ['FastAPI', 'Next.js', 'WebSockets', 'Pipecat', 'Groq', 'ElevenLabs'],
+    desc: 'A voice-first Spanish tutor exploring conversational audio with Pipecat and WebSockets, a finite-state lesson manager and spaced vocabulary reviews.',
+    stack: ['FastAPI', 'Next.js', 'WebSockets', 'Pipecat', 'Groq', 'Silero VAD'],
     code: `${GH}/VoiceTutor`,
     live: 'https://voicetutor-six.vercel.app/',
     media: ['/media/work/voicetutor-1.jpg', '/media/work/voicetutor-2.jpg'],
@@ -132,4 +132,5 @@ export const LINKS = [
   { label: 'LeetCode', href: 'https://leetcode.com/u/ayushsingh9/' },
   { label: 'Codeforces', href: 'https://codeforces.com/profile/AyushSinghCF' },
   { label: 'Kaggle', href: 'https://www.kaggle.com/ayuxxx999' },
+  { label: 'CodeChef', href: 'https://www.codechef.com/users/ayushsinghcf' },
 ];
